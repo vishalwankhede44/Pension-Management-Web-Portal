@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="this.popup==true" class="alert alert-{{this.popupType}} alert-dismissible fade show col-10 offset-1 col-md-6 offset-md-3 mt-5" role="alert">
+  <strong>{{popupMessage}}</strong>
+  <button type="button" class="close" (click)="this.popup=false;" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div *ngIf="this.loading==true">
+  <h3 class="text-center mt-3">Loading....</h3>
+</div>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-10 offset-1 col-md-6 offset-md-3 " id="aadharInputForm">
+        <h3 class="text-center mb-5">Check Pension Details</h3>
+        <form  #processPensionInput="ngForm" (ngSubmit)="pensionerDetailsInputSubmit(processPensionInput.value)">
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Aadhaar Number</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="bi bi-person-badge-fill"></i></div>
+              </div>
+              <input class="form-control" type="number" ngModel id="aadhaarNumber" name="aadhaarNumber" maxlength="12"  placeholder="Enter Aadhaar Number" >
+            </div>
+          </div>
+          
+          <div class="col-auto">
+            <button type="submit" class="btn btn-block mt-2 mt-md-3 " >Submit</button>
+          </div>
+          </form>
+        </div>         
+  </div>
+</div>
+
+
+<!-- <div class="container">
+    <div class="row">
+        <form class="col-6" #processPensionInput="ngForm" (ngSubmit)="pensionerDetailsInputSubmit(processPensionInput.value)">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Aadhar Number</label>
+              <input type="text" class="form-control" ngModel id="aadharNumber" name="aadharNumber" aria-describedby="emailHelp" placeholder="Enter Username">
+            </div>
+            <button type="submit" class="btn btn-primary mt-2" >Submit</button>
+          </form>
+
+          
+    </div>
+
+</div> -->

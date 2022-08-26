@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<div *ngIf="this.popup==true" class="alert alert-{{this.popupType}} alert-dismissible fade show col-10 offset-1 col-md-6 offset-md-3 mt-5" role="alert">
+  <strong>{{popupMessage}}</strong>
+  <button type="button" class="close" (click)="this.popup=false;" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-10 offset-1 col-md-6 offset-md-3 " id="loginForm">
+          <h2 class="text-center mb-3">Pensioner Login</h2>
+          <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+            <div class="col-auto">
+              <label class="sr-only" for="inlineFormInputGroup">Username</label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                </div>
+                <input type="text"  ngModel name="username" class="form-control" id="username" placeholder="Username">
+              </div>
+            </div>
+            <div class="col-auto">
+              <label class="sr-only" for="inlineFormInputGroup">Username</label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="bi bi-key-fill"></i></div>
+                </div>
+                <input [type]="show ? 'text' : 'password'" ngModel name="password" class="form-control" id="password" placeholder="Password">
+                <div class="input-group-postpend">
+                  <button class="btn" (click)="togglePassword()" type="button">
+                    <i *ngIf="show;else hideIcon" class="bi bi-eye-fill"></i>
+                   <ng-template #hideIcon><i class="bi bi-eye-slash-fill"></i></ng-template></button>
+              
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <input type="submit" class="btn btn-block mt-2 mt-md-3 " value="Log In" >
+            </div>
+            </form>
+          </div> 
+          
+    </div>
+
+</div>
+

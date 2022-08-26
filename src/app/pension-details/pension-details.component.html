@@ -1,0 +1,44 @@
+
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-10 offset-1 col-md-6 offset-md-3  " id="pensionDetailsDiv">
+          <h3 class="text-center mb-3">Pension Details</h3>
+            <table class="table col-12  col-md-8 offset-md-2  " id="pensionDetailsTable">
+                <tbody>
+                    <tr>
+                        <td>Aadhaar Number :</td>
+                        <td>{{aadhaarNumber}}</td>
+                    </tr>
+                    <tr>
+                        <td>Pension Amount :</td>
+                        <td>{{pensionAmount}} Rs.</td>
+                    </tr>
+                    <tr>
+                        <td>Bank Service Charge :</td>
+                        <td>{{serviceCharge}} Rs.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-sm mt-5 btn-dark" type="button" (click)="previousPage()">Back to Previous Page</button>
+            
+          </div>         
+    </div>
+  </div>
+  
+  
+  <!-- <div class="container">
+      <div class="row">
+          <form class="col-6" #processPensionInput="ngForm" (ngSubmit)="pensionerDetailsInputSubmit(processPensionInput.value)">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Aadhar Number</label>
+                <input type="text" class="form-control" ngModel id="aadharNumber" name="aadharNumber" aria-describedby="emailHelp" placeholder="Enter Username">
+              </div>
+              <button type="submit" class="btn btn-primary mt-2" >Submit</button>
+            </form>
+  
+            
+      </div>
+  
+  </div> -->

@@ -1,0 +1,33 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+#pensionDetailsDiv{
+    padding:5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+    border-radius: 25px 5px 25px 5px;
+}
+
+h3{
+    color:#345B63;
+}
+
+#pensionDetailsTable {
+    background-color: #345B63;
+    color: #D4ECDD;
+    border: solid 1px #112031;
+    border: none !important;
+}
+
+ 
+ .table tr td {
+    border-bottom: 1px solid #152D35; 
+ }
+
+#pensionDetailsTable tr td:first-child{
+    font-weight: bold;
+    text-align: left;
+}
+
+
+
